@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar>
+    <img class="logo" src="../../assets/icon/netflix-icon.png">
+  </ion-toolbar>
+</ion-header>
+
+
+
+<ion-content no-padding  class="card-background-page">
+
+  <ion-card>
+      <img src="../../assets/icon/shazam-movie.jpg"/>
+      <div class="card-subtitle">{{studio}}</div>
+      <div class="card-title">{{titleMovie}}</div>
+    </ion-card>
+
+  <h3 class="spotlight">{{txtTitle}}</h3>
+  <div class="flex-container">
+    <div class="content" *ngFor="let popular of populars" (click)="viewDetail(popular)">
+      <img src="http://image.tmdb.org/t/p/w500{{popular.poster_path}}">
+    </div>
+  </div>
+
+</ion-content>

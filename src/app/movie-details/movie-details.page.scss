@@ -1,0 +1,38 @@
+ion-content {
+    --ion-background-color: #000000;
+}
+
+ion-card-title {
+    --color: #ffffff;
+    font-weight: 600;
+    font-size: 30px;
+}
+
+.sc-ion-card-md-h {
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.card-background-page {
+
+    ion-card {
+        position: relative;
+        text-align: center;
+    }
+
+    .sc-ion-card-md-h {
+        margin-left: 0px;
+        margin-right: 0px;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        border-radius: 4px;
+        font-size: 14px;
+
+    }
+
+
+}

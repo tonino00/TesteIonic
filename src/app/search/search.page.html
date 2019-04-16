@@ -1,0 +1,16 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-searchbar placeholder="Busque por série, filmes, gêneros..." [(ngModel)]="movieParams" (ionChange)="searchMovies($event)"></ion-searchbar>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <h3 class="msg-title" *ngIf="!movieParams">{{msgSearch}}</h3>
+  <p class="advertisement" *ngIf="!movieParams">{{msgAdvertisement}}</p>
+  <div class="flex-container">
+      <div class="content" *ngFor="let result of results" (click)="viewDetail(result)">
+        <img src="http://image.tmdb.org/t/p/w500{{result.poster_path}}">
+      </div>
+    </div>
+
+</ion-content>

@@ -1,0 +1,48 @@
+ion-content {
+    --ion-background-color: #000000;
+}
+
+.movie-title {
+    font-size: 1em;
+    color: #ffffff;
+    font-weight: 400;
+    margin: 15px
+}
+
+.movie-description {
+    font-size: 1em;
+    color: #ffffff;
+    font-weight: 400;
+    padding-left: 15px
+}
+
+ion-item {
+    -ion-item-background: 5px solid #c3c3c3;
+}
+
+.flex-container {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    flex-wrap: nowrap;
+
+    .content {
+        min-width: 120px;
+        min-height: 94px;
+        margin: 5px;
+    }
+}
+
+.msg-title {
+    color: #ffffff;
+    font-size: 28px;
+    font-weight: 600;
+}
+
+.advertisement {
+    color: #c3c3c3;
+    font-size: 11px;
+    font-weight: 400;
+}
