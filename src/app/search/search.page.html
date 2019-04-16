@@ -1,6 +1,6 @@
 <ion-header>
   <ion-toolbar>
-    <ion-searchbar placeholder="Busque por série, filmes, gêneros..." [(ngModel)]="movieParams" (ionChange)="searchMovies($event)"></ion-searchbar>
+    <ion-searchbar placeholder="Busque por série, filmes, gêneros..." [(ngModel)]="movieParams" (ionChange)="searchMovies($event)" (ionClear)="clearSearch($event)"></ion-searchbar>
   </ion-toolbar>
 </ion-header>
 

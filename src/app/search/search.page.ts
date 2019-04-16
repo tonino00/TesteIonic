@@ -46,6 +46,10 @@ export class SearchPage implements OnInit {
     });
   }
 
+  clearSearch(event) {
+    this.results = [];
+  }
+
   viewDetail(movie) {
     this.router.navigate(['/movie-details', { movie: JSON.stringify(movie) }]);
   }
