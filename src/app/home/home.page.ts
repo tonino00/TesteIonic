@@ -22,6 +22,7 @@ export class HomePage implements OnInit {
   async ngOnInit() {
     this.isLoading = true;
       return await this.loadingController.create({
+        message: 'Carregando...',
         duration: 1000,
       }).then(a => {
         a.present().then(() => {

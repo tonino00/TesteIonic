@@ -29,6 +29,7 @@ export class SearchPage implements OnInit {
   async searchMovies(ev: any) {
     this.isLoading = true;
     return await this.loadingController.create({
+      message: 'Carregando...',
       duration: 1000,
     }).then(a => {
       a.present().then(() => {
