@@ -18,13 +18,14 @@
 }
 
 .spotlight {
-  color: #ffffff;
-  font-weight: 400;
+  color: #f5f5f1;
+  font-weight: 600;
   margin: 15px 10px;
+  font-family: 'K2D', sans-serif;
 }
 
 ion-content {
-  --ion-background-color: #000000;
+  --ion-background-color: #221F1F;
 }
 
 .card-background-page {
@@ -40,6 +41,7 @@ ion-content {
     font-size: 2.0em;
     width: 100%;
     font-weight: bold;
+    font-family: 'K2D', sans-serif;
     color: #fff;
   }
 
@@ -48,7 +50,8 @@ ion-content {
     position: absolute;
     top: 52%;
     width: 100%;
-    color: #c3c3c3;
+    font-family: 'K2D', sans-serif;
+    color: #f5f5f1;
   }
 
   .sc-ion-card-md-h {

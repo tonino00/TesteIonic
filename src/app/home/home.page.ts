@@ -11,10 +11,12 @@ import { LoadingController } from '@ionic/angular';
 })
 export class HomePage implements OnInit {
 
-  txtTitle = ' Populares na Netflix';
+  txtPopularTitle = ' Populares na Netflix';
+  txtHighMoviesTitle = ' Em alta';
   titleMovie = 'Shazam';
   studio = 'DC Comics';
   populars: any;
+  othersMovies: any;
   isLoading = false;
 
   constructor(public netflixService: NetflixService, public router: Router, public loadingController: LoadingController ) { }
@@ -28,7 +30,11 @@ export class HomePage implements OnInit {
         a.present().then(() => {
           this.netflixService.getPopularMovies(1).subscribe(data => {
             this.populars = data.results;
-            console.log(data.results);
+            console.log('Popular', data.results);
+          });
+          this.netflixService.getInOthersMovies().subscribe(data => {
+            this.othersMovies = data.results;
+            console.log('Others Movies', data.results);
           });
           if (!this.isLoading) {
             a.dismiss().then(() => console.log('close'));

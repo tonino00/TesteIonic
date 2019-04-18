@@ -14,10 +14,17 @@
       <div class="card-title">{{titleMovie}}</div>
     </ion-card>
 
-  <h3 class="spotlight">{{txtTitle}}</h3>
+  <h3 class="spotlight">{{txtPopularTitle}}</h3>
   <div class="flex-container">
     <div class="content" *ngFor="let popular of populars" (click)="viewDetail(popular)">
       <img src="http://image.tmdb.org/t/p/w500{{popular.poster_path}}">
+    </div>
+  </div>
+
+  <h3 class="spotlight">{{txtHighMoviesTitle}}</h3>
+  <div class="flex-container">
+    <div class="content" *ngFor="let othersMovie of othersMovies" (click)="viewDetail(othersMovie)">
+      <img src="http://image.tmdb.org/t/p/w500{{othersMovie.poster_path}}">
     </div>
   </div>
 

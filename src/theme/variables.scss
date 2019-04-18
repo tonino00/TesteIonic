@@ -1,4 +1,3 @@
-
 /** Ionic CSS Variables **/
 :root {
   /** primary **/
@@ -75,11 +74,14 @@
 
 
   /** Components **/
-  --ion-toolbar-background:#000000;
+  --ion-toolbar-background: #000000;
   --ion-tab-bar-background: #000000;
-  --ion-tab-bar-color-activated:#ffffff;
+  --ion-tab-bar-color-activated: #ffffff;
 
   ::-webkit-scrollbar {
     display: none;
-} 
+  }
+
+@import url('https://fonts.googleapis.com/css?family=K2D');
+
 }

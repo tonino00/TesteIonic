@@ -1,17 +1,19 @@
 ion-content {
-    --ion-background-color: #000000;
+    --ion-background-color: #221F1F;
 }
 
 .movie-title {
     font-size: 1em;
-    color: #ffffff;
+    font-family: 'K2D', sans-serif;
+    color: #f5f5f1;
     font-weight: 400;
     margin: 15px
 }
 
 .movie-description {
     font-size: 1em;
-    color: #ffffff;
+    font-family: 'K2D', sans-serif;
+    color: #f5f5f1;
     font-weight: 400;
     padding-left: 15px
 }
@@ -36,21 +38,23 @@ ion-item {
 }
 
 .msg-title {
-    color: #ffffff;
+    font-family: 'K2D', sans-serif;
+    color: #f5f5f1;
     font-size: 28px;
     font-weight: 600;
 }
 
 .advertisement {
+    font-family: 'K2D', sans-serif;
     color: #c3c3c3;
     font-size: 11px;
     font-weight: 400;
 }
 
 .sc-ion-searchbar-ios-h {
-    --clear-button-color: var(--ion-color-step-600,#666);
-    --cancel-button-color: var(--ion-color-primary,#3880ff);
-    --color: var(--ion-text-color,#333);
-    --icon-color: var(--ion-color-step-600,#666);
+    --clear-button-color: var(--ion-color-step-600, #666);
+    --cancel-button-color: var(--ion-color-primary, #3880ff);
+    --color: var(--ion-text-color, #333);
+    --icon-color: var(--ion-color-step-600, #666);
     --background: #ffffff;
-  }
+}

@@ -42,7 +42,7 @@ export class NetflixService {
     return this.http.get(`${this.urlDiscover}?api_key=${this.apiKey}&language=${this.language}&sort_by=${this.sortBy}&include_adult=false&include_video=false&page=${page}`);
   }
 
-  getInTheaters(): Observable<any> {
+  getInOthersMovies(): Observable<any> {
     // tslint:disable-next-line:max-line-length
     return this.http.get(`${this.urlDiscover}?api_key=${this.apiKey}&language=${this.language}&primary_release_date.gte=${this.releaseDateGte}&primary_release_date.lte=${this.releaseDateLte}&include_adult=false&include_video=false&page=${this.pages}`);
   }
