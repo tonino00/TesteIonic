@@ -9,7 +9,7 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class MovieDetailsPage implements OnInit {
   movie: any;
-  titleDetail = 'Series é filmes';
+  titleDetail = 'Series e filmes';
 
   constructor(public netflixService: NetflixService, private activatedRoute: ActivatedRoute) { }
 

@@ -3,6 +3,7 @@ import { NetflixService } from '../services/netflix.service';
 import { ActivatedRoute } from '@angular/router';
 import { LoadingController } from '@ionic/angular';
 import { Router } from '@angular/router';
+import { AlertController } from '@ionic/angular';
 
 @Component({
   selector: 'app-search',
@@ -18,7 +19,7 @@ export class SearchPage implements OnInit {
   isLoading = false;
 
   // tslint:disable-next-line:max-line-length
-  constructor(public netflixService: NetflixService, private activatedRoute: ActivatedRoute, private router: Router, public loadingController: LoadingController ) { }
+  constructor(public netflixService: NetflixService, private activatedRoute: ActivatedRoute, private router: Router, public loadingController: LoadingController, public alertController: AlertController ) { }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad SearchPage');
@@ -33,7 +34,7 @@ export class SearchPage implements OnInit {
       duration: 1000,
     }).then(a => {
       a.present().then(() => {
-        if (  this.movieParams && this.movieParams.length > 1 ) {
+        if (  this.movieParams && this.movieParams.length > 3 ) {
           const val = ev.target.value;
           this.netflixService.searchMovies(val).subscribe(data => {
           console.log(data.results);
@@ -45,6 +46,29 @@ export class SearchPage implements OnInit {
         }
       });
     });
+  }
+
+  async modalInfo(event) {
+    const alert = await this.alertController.create({
+      header: 'Alert',
+      message: 'Hello',
+      buttons: [
+        {
+          text: 'Cancel',
+          role: 'cancel',
+          cssClass: 'secondary',
+          handler: (blah) => {
+            console.log('Confirm Cancel: blah');
+          }
+        }, {
+          text: 'Okay',
+          handler: () => {
+            console.log('Confirm Okay');
+          }
+        }
+      ]
+    });
+    await alert.present();
   }
 
   clearSearch(event) {

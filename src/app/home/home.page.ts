@@ -15,6 +15,7 @@ export class HomePage implements OnInit {
   txtHighMoviesTitle = ' Em alta';
   titleMovie = 'Shazam';
   studio = 'DC Comics';
+  description = 'teen . heroes . american';
   populars: any;
   othersMovies: any;
   isLoading = false;

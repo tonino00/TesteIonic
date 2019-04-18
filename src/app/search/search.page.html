@@ -1,6 +1,7 @@
 <ion-header>
   <ion-toolbar>
-    <ion-searchbar placeholder="Busque por série, filmes, gêneros..." [(ngModel)]="movieParams" (ionChange)="searchMovies($event)" (ionClear)="clearSearch($event)"></ion-searchbar>
+    <ion-searchbar placeholder="Busque por série, filmes, gêneros..." [(ngModel)]="movieParams"
+      (ionChange)="searchMovies($event)" (ionClear)="clearSearch($event)"></ion-searchbar>
   </ion-toolbar>
 </ion-header>
 
@@ -8,9 +9,11 @@
   <h3 class="msg-title" *ngIf="!movieParams">{{msgSearch}}</h3>
   <p class="advertisement" *ngIf="!movieParams">{{msgAdvertisement}}</p>
   <div class="flex-container">
-      <div class="content" *ngFor="let result of results" (click)="viewDetail(result)">
-        <img src="http://image.tmdb.org/t/p/w500{{result.poster_path}}">
-      </div>
+    <div class="content" *ngFor="let result of results" (click)="viewDetail(result)">
+      <img src="http://image.tmdb.org/t/p/w500{{result.poster_path}}">
     </div>
-
+  </div>
+  <!-- <div text-center>
+    <ion-icon (click)="modalInfo($event)" class="custom-button" slot="icon-only" name="alert"></ion-icon>
+  </div> -->
 </ion-content>
