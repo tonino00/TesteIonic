@@ -34,7 +34,7 @@ export class SearchPage implements OnInit {
       duration: 1000,
     }).then(a => {
       a.present().then(() => {
-        if (  this.movieParams && this.movieParams.length > 3 ) {
+        if (  this.movieParams && this.movieParams.length > 1 ) {
           const val = ev.target.value;
           this.netflixService.searchMovies(val).subscribe(data => {
           console.log(data.results);
