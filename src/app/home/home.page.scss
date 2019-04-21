@@ -57,10 +57,43 @@ ion-content {
   .card-description {
     font-size: 1.0em;
     position: absolute;
-    top: 80%;
+    top: 65%;
     width: 100%;
     font-family: 'K2D', sans-serif;
     color: #f5f5f1;
+  }
+
+  .flex-items {
+    position: absolute;
+    top: 72%;
+    left: 1em;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    justify-items: center;
+    align-items: stretch;
+  }
+
+  .flex-content {
+    display: flex;
+    margin: 15px 15px;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 6em;
+    color:#f5f5f1;
+    font-weight: 400;
+  }
+
+  .nt-icon {
+    font-size: 2em;
+  }
+
+  .play-movie {
+    width: 100px;
+    height: 30px;
+    position: absolute;
+    top: 2em;
   }
 
   .sc-ion-card-md-h {
@@ -71,7 +104,11 @@ ion-content {
     border-radius: 4px;
     font-size: 14px;
 
+    img {
+      height: 260px !important;
+    }
   }
+  
 
   .sc-ion-card-ios-s {
     margin-left: 0px;
@@ -81,6 +118,11 @@ ion-content {
     border-radius: 4px;
     font-size: 14px;
 
+    img {
+      height: 260px !important;
+    }
   }
+
+
 
 }
